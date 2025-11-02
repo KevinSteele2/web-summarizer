@@ -45,8 +45,8 @@ def summarize_text(text, max_length=130, min_length=30):
 
 if __name__ == "__main__":
     set_wiki_link(input("Enter the wiki link: "))
-    print(f"The wiki link is: {wiki_link}")
+    #print(f"The wiki link is: {wiki_link}")
     text = fetch_wiki_content()
     text = parse_wiki_content(text)
-    summary = summarize_text(text, 52, 30)
+    summary = summarize_text(text)
     print(summary)
