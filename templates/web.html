@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Web Summarizer</title>
+    <style>
+      body { font-family: system-ui, sans-serif; margin: 1.5rem; }
+      input[type="text"] { width: 80%; padding: 0.4rem; }
+      button { padding: 0.4rem 0.6rem; }
+      pre { white-space: pre-wrap; border:1px solid #ddd; padding:10px; margin-top:1rem; min-height: 4rem; }
+    </style>
+  </head>
+  <body>
+    <h1>Web Summarizer</h1>
+
+    <form id="frm">
+      <input id="url" name="url" type="text" placeholder="https://en.wikipedia.org/wiki/..." />
+      <button type="submit">Summarize</button>
+    </form>
+
+    <pre id="out">Enter a URL above and click Summarize</pre>
+
+    <!-- load the client JS (you already have static/js/app.js) -->
+    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+  </body>
+</html>
