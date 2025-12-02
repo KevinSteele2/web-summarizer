@@ -22,7 +22,6 @@ def summarize_endpoint():
         html = main.fetch_wiki_content()
         text = main.parse_wiki_content(html)
         
-        # Call the Hugging Face Space instead of running model locally
         hf_response = requests.post(HF_SPACE_URL, json={"text": text}, timeout=60)
         if hf_response.status_code != 200:
             return f"HF error: {hf_response.text}", 500
