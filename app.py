@@ -4,7 +4,6 @@ import requests
 
 app = Flask(__name__)
 
-# URL of your Hugging Face Space
 HF_SPACE_URL = "https://kevinSteele-WebSummarizer.hf.space/summarize"
 
 @app.route("/", methods=["GET"])
